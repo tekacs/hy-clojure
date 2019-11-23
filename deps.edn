@@ -1,0 +1,10 @@
+{:deps
+ {org.clojure/clojure {:mvn/version "1.10.1"}
+  cnuernber/libpython-clj {:mvn/version "1.9"}
+  gnl/ghostwheel {:mvn/version "0.3.9"}
+  mount {:mvn/version "0.1.16"}
+  criterium {:mvn/version "0.4.5"}}
+
+ :aliases
+ {:dev
+  {:extra-paths ["dev"]}}}
