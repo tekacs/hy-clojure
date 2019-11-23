@@ -1,6 +1,6 @@
 (ns dev
   (:require [mount.core :refer [defstate]]
-            [pytest.core :refer [hy-str! hyq! hy!]]))
+            [hy-clojure.core :refer [hy-str! hyq! hy!]]))
 
 (defn add []
   (hy-str! "(+ 1 2 3)"))

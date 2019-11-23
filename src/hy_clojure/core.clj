@@ -1,4 +1,4 @@
-(ns pytest.core
+(ns hy-clojure.core
   (:require
     [libpython-clj.python :as py]
     [mount.core :as mount :refer [defstate]]))
@@ -23,6 +23,7 @@
   (py/call-attr @hy "read_str" string))
 
 (defn hy-str! [string & {:keys [locals]}]
+  @connection
   (py/call-attr @indirect "eval_indirect" (hy-read string)))
 
 (defmacro hy! [& forms]
