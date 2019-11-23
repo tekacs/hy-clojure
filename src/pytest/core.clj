@@ -19,17 +19,16 @@
   :start (py/import-module "indirect"))
 
 (defn hy-read [string]
+  @connection
   (py/call-attr @hy "read_str" string))
 
 (defn hy-str! [string & {:keys [locals]}]
   (py/call-attr @indirect "eval_indirect" (hy-read string)))
 
 (defmacro hy! [& forms]
-  @connection
   (let [hy-code (pr-str (conj forms 'do))]
     `(hy-str! ~hy-code)))
 
 (defmacro hyq! [do-form]
-  @connection
   (let [hy-code (pr-str (second do-form))]
     `(hy-str! ~hy-code)))
