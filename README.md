@@ -28,3 +28,5 @@ In order to stop your IDE from raising issues, you can quote your Hy code. You c
 
 - [easy] Allow the caller to pass locals the Hy interpreter
 - [easy] Add tests
+- [medium] Support sending reader macros to hy via the macro
+- [medium] Allow inline substitution of variables into Hy forms in the macro: `(let [clj# "clojure!"] (hy! (print clj#)))`
