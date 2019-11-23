@@ -27,3 +27,4 @@ In order to stop your IDE from raising issues, you can quote your Hy code. You c
 ### TODO
 
 - [easy] Allow the caller to pass locals the Hy interpreter
+- [easy] Add tests
